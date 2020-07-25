@@ -1,19 +1,18 @@
 export enum Ingredient {
-  BREADBOTTOM = "bread-bottom",
-  BREADTOP = "bread-top",
   MEAT = "meat",
   CHEESE = "cheese",
   SALAD = "salad",
   BACON = "bacon",
+  BREADTOP = "bread-top",
+  BREADBOTTOM = "bread-bottom",
 }
 
-export interface IngredientType {
-  type: Ingredient;
-}
+// Condiments are a tuple with an ingredient, amount, and a price
+export type Condiment = [Ingredient, number, number];
 
-export interface AddableIngredient {
-  [Ingredient.SALAD]: number;
-  [Ingredient.BACON]: number;
-  [Ingredient.CHEESE]: number;
-  [Ingredient.MEAT]: number;
+export interface BuilderState {
+  condiments: Condiment[];
+  totalPrice: number;
+  canPurchase: boolean;
+  purchasing: boolean;
 }

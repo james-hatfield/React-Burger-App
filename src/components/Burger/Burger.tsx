@@ -1,15 +1,16 @@
 import React from "react";
 import classes from "./Burger.module.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
-import { Ingredient, AddableIngredient } from "../../data.types";
+import { Ingredient, Condiment } from "../../data.types";
 
-const Burger = (ingredients: AddableIngredient) => {
+const Burger = (ingredients: Condiment[]) => {
   let transformedIngredients = Object.keys(ingredients)
-    .map((key) => {
-      return [
-        ...Array(ingredients[key as keyof AddableIngredient]),
-      ].map((_, i) => (
-        <BurgerIngredient key={key + i} type={key as Ingredient} />
+    .map((_, i) => {
+      return [...Array(ingredients[i][1])].map((_, j) => (
+        <BurgerIngredient
+          key={ingredients[i][0] + j}
+          ingredKey={ingredients[i][0] as Ingredient}
+        />
       ));
     })
     .reduce((arr, curr) => arr.concat(curr), []);
@@ -18,9 +19,9 @@ const Burger = (ingredients: AddableIngredient) => {
   }
   return (
     <div className={classes.Burger}>
-      <BurgerIngredient type={Ingredient.BREADTOP} />
+      <BurgerIngredient ingredKey={Ingredient.BREADTOP} />
       {transformedIngredients}
-      <BurgerIngredient type={Ingredient.BREADBOTTOM} />
+      <BurgerIngredient ingredKey={Ingredient.BREADBOTTOM} />
     </div>
   );
 };

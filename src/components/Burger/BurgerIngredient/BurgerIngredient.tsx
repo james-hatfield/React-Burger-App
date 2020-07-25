@@ -1,11 +1,11 @@
 import React from "react";
 import classes from "./BurgerIngredient.module.css";
-import { IngredientType, Ingredient } from "../../../data.types";
+import { Ingredient } from "../../../data.types";
 
-const BurgerIngredient = (props: IngredientType) => {
+const BurgerIngredient = (props: { ingredKey: Ingredient }) => {
   let ingredient = null;
 
-  switch (props.type) {
+  switch (props.ingredKey) {
     case Ingredient.BREADBOTTOM:
       ingredient = <div className={classes.BreadBottom}></div>;
       break;
