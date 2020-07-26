@@ -16,3 +16,9 @@ export interface BuilderState {
   canPurchase: boolean;
   purchasing: boolean;
 }
+
+export interface Link {
+  link: string;
+  text: string;
+  active: boolean;
+}

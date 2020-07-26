@@ -1,0 +1,19 @@
+.Toolbar {
+  display: grid;
+  grid-area: toolbar;
+  width: 100%;
+  grid-template-columns: 56px auto;
+  grid-template-rows: 56px;
+  background-color: #703b09;
+  z-index: 90;
+}
+
+.Toolbar nav {
+  height: 100%;
+}
+
+@media (max-width: 500px) {
+  .DesktopOnly {
+    display: none;
+  }
+}

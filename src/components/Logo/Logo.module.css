@@ -1,0 +1,22 @@
+.Logo {
+  display: flex;
+  background-color: white;
+  padding: 8px;
+  margin: 10px 0 0 10px;
+  height: 75%;
+  box-sizing: border-box;
+  border-radius: 2px;
+  justify-content: center;
+}
+
+.Logo img {
+  height: 100%;
+}
+
+@media (max-width: 500px) {
+  .Logo {
+    justify-self: right;
+    width: 56px;
+    margin: 10px 10px 0 10px;
+  }
+}

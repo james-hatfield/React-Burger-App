@@ -3,9 +3,10 @@
   height: 250px;
   margin: auto;
   text-align: center;
-  overflow: hidden;
   font-weight: bold;
   font-size: 1.2rem;
+  grid-area: burger;
+  overflow-y: auto;
 }
 
 @media (min-width: 500px) and (min-height: 400px) {

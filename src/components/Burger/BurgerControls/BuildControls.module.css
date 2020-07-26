@@ -1,12 +1,21 @@
 .BuildControls {
+  display: flex;
+  grid-area: controls;
+  height: 100%;
   width: 100%;
   background-color: #cf8f2e;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
   box-shadow: 0 2px 1px #ccc;
-  margin: auto;
-  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  margin-top: 50px;
 }
 
 .OrderButton {

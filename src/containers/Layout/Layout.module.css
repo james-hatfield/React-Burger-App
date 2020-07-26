@@ -1,0 +1,9 @@
+.Main {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 60vh;
+  grid-template-areas:
+    "burger"
+    "controls";
+  grid-area: main;
+}
