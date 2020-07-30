@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\api\\API.csproj": {}
+    "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\api\\API.csproj": {
+    "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\api\\API.csproj",
+        "projectUniqueName": "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\api\\API.csproj",
+        "projectPath": "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\API\\API.csproj",
         "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\api\\obj\\",
+        "outputPath": "C:\\Users\\James\\Documents\\Programming\\react\\burger-app\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.6, )"

@@ -57,6 +57,29 @@ class BurgerBuilder extends Component {
 
   purchaseHandler = () => this.setState({ purchasing: !this.state.purchasing });
 
+  placeOrder = () => {
+    const order = {
+      ingredients: this.state.condiments,
+      price: this.state.totalPrice,
+      customer: {
+        name: "James Hatfield",
+        address: {
+          street: "Test Street",
+          zipCode: "55555",
+          country: "United States",
+        },
+        email: "test@test.com",
+      },
+    };
+
+    fetch("http://localhost:5000/order", {
+      method: "POST",
+      body: JSON.stringify(order),
+    }).then((res) => {
+      console.log(res);
+    });
+  };
+
   render() {
     return (
       <>
@@ -65,7 +88,7 @@ class BurgerBuilder extends Component {
             condiments={this.state.condiments}
             price={this.state.totalPrice}
             cancel={this.purchaseHandler}
-            continue={() => "test"}
+            continue={this.placeOrder}
           />
         </Modal>
         <Burger {...this.state.condiments} />

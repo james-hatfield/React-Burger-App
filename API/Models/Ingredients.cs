@@ -2,11 +2,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace API.Models
 {
-    public class Burger
+    public class Ingredients
     {
         [Key]
-        public int Id { get; set; }
-
+        public int ID { get; set; }
         [Required]
         public int Meat { get; set; }
 
@@ -25,13 +24,9 @@ namespace API.Models
         [Required]
         public int BreadBottom { get; set; }
 
-        [Required]
-        public int TotalPrice { get; set; }
-
     }
 
-
-    public class MutBurger
+    public class MutIngredients
     {
         [Required]
         public int Meat { get; set; }
@@ -51,8 +46,6 @@ namespace API.Models
         [Required]
         public int BreadBottom { get; set; }
 
-        [Required]
-        public int TotalPrice { get; set; }
-
     }
+
 }
