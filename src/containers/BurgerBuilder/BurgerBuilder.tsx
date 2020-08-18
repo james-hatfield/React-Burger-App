@@ -59,7 +59,14 @@ class BurgerBuilder extends Component {
 
   placeOrder = () => {
     const order = {
-      ingredients: this.state.condiments,
+      ingredients: {
+        salad: this.state.condiments[0][1],
+        bacon: this.state.condiments[1][1],
+        cheese: this.state.condiments[2][1],
+        meat: this.state.condiments[3][1],
+        breadTop: 1,
+        breadBottom: 1,
+      },
       price: this.state.totalPrice,
       customer: {
         name: "James Hatfield",
@@ -72,12 +79,17 @@ class BurgerBuilder extends Component {
       },
     };
 
+    console.log(JSON.stringify(order));
     fetch("http://localhost:5000/order", {
       method: "POST",
       body: JSON.stringify(order),
-    }).then((res) => {
-      console.log(res);
-    });
+    })
+      .then((res) => res.json())
+      .then(console.log);
+
+    // fetch("http://localhost:5000/order")
+    //   .then((res) => res.json())
+    //   .then((data) => console.log(data));
   };
 
   render() {

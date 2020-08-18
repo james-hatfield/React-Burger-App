@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace API.Models
@@ -15,8 +16,7 @@ namespace API.Models
 
         public IEnumerable<Order> GetAllOrders()
         {
-            var orders = _context.Orders.ToList();
-            // var orders = _context.Orders
+            var orders = _context.Orders.Include(a => a.ingredients).Include(c => c.customer).ToList();
 
             return orders;
         }

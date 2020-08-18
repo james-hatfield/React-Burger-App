@@ -2,6 +2,7 @@
 using API.Models;
 using System.Collections.Generic;
 using AutoMapper;
+using System;
 
 namespace API.Controllers
 {
@@ -23,7 +24,6 @@ namespace API.Controllers
         public ActionResult<IEnumerable<Order>> GetAllOrders()
         {
             var orders = _repo.GetAllOrders();
-
             return Ok(orders);
         }
 
@@ -41,9 +41,8 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Order> CreateOrder(MutOrder order)
+        public ActionResult<Order> CreateOrder([FromForm] MutOrder order)
         {
-
             var orderModel = _mapper.Map<Order>(order);
             _repo.CreateOrder(orderModel);
             _repo.SaveChanges();
