@@ -1,0 +1,14 @@
+{
+  "type": "mssql",
+  "host": "localhost",
+  "port": 1433,
+  "username": "burgerapp",
+  "password": "pa55word",
+  "database": "BurgerAppDB",
+  "logging": true,
+  "entities": ["dist/**/*.entity.js"],
+  "migrations": ["dist/migration/*.js"],
+  "cli": {
+    "migrationsDir": "src/migration"
+  }
+}
