@@ -1,0 +1,18 @@
+# version: '3.7'
+
+# services:
+# main:
+#   container_name: main
+#   build:
+#     context: .
+#     target: builder
+#   volumes:
+#     - .:/usr/src/app
+#     - /usr/src/app/node_modules
+#   ports:
+#     - 8080:4200
+#   command: yarn start
+#   env_file: .env
+#   depends_on:
+#     - postgres
+
